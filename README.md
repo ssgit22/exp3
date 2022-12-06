@@ -106,20 +106,24 @@ break; }
 if (prc != 0){
 printf ("\n Process %d completed",i);
 count++;
-printf ("\n Available matrix:")
-for (j = 1; j <= rno; j++) {
-work[j] += allocated[prc][ j];
-allocated[prc][j] = 0;
-max[prc][j] = 0;
-flag[prc] = 1;
-printf (" %d", work[j]); } } }
-while (count != pno && prc != 0);
-if (count == pno)
-printf ("\nThe system is in a safe
-state!!");
-else
-printf ("\nThe system is in an unsafe state!!");
-return 0; }
+printf ("\n Available matrix:");
+for (j = 1; j <= rno; j++) 
+{
+    work[j] += allocated[prc][ j];
+    allocated[prc][j] = 0;
+    max[prc][j] = 0;
+    flag[prc] = 1;
+    printf (" %d", work[j]); } } }
+    while (count != pno && prc != 0);
+    if (count == pno)
+    printf ("\nThe system is in a safe state!!");
+    else
+    printf ("\nThe system is in an unsafe state!!");
+    
+    return 0;
+    
+}
+
 
 ```
 
